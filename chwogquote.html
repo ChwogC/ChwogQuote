@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChwogQuote</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #quote {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>ChwogQuote</h1>
+  <button onclick="generateQuote()">Generate Quote</button>
+  <div id="quote"></div>
+
+  <script>
+    const quotes = [
+      "Wisdom begins in wonder. - Socrates",
+      "Knowing yourself is the beginning of all wisdom. - Aristotle",
+      "The journey of a thousand miles begins with one step. - Lao Tzu",
+      "Silence is a source of great strength. - Lao Tzu",
+      "Life is really simple, but we insist on making it complicated. - Confucius"
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
