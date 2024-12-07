@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHWOG Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        #quote-box {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #000;
+            display: inline-block;
+            background-color: #fff;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #008cba;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <div id="quote-box">Click "Generate" to see a CHWOG quote!</div>
+    <button onclick="generateQuote()">Generate</button>
+
+    <script>
+        const quotes = [
+            "The wisest frog hops in silence.",
+            "Patience is the greatest leap toward wisdom.",
+            "A still pond reflects the truest Chwog.",
+            "From the ancient valleys, wisdom flows like water.",
+            "The leap of faith is always worth it."
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote-box").innerText = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
